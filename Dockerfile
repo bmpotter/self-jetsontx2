@@ -1,4 +1,4 @@
-# Dockerfile, watson-intu/Self build using raspbian (arm64)
+# Dockerfile, watson-intu/Self build using debian:jessie (arm64)
 
 FROM debian:jessie
 MAINTAINER dyec@us.ibm.com
