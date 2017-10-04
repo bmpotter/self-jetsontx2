@@ -4,6 +4,7 @@
 ## Jetson TX2 Setup
 For initial Jetson TX2 setup from scratch, including SSD and Docker, follow this guide: https://github.com/open-horizon/cogwerx-jetson-tx1/wiki/Initial-setup:-Jetson-TX1-and-TX2
 ![NVIDIA Jetson TX1 devkit](http://images.nvidia.com/content/tegra/embedded-systems/images/jetson-tx1-devkit.jpg)
+
 You'll need a microphone (required) and camera (optional) to interact with Self. 
 
 
