@@ -21,13 +21,13 @@ Readme for testing the Intu AI project deployment pattern. Intu/Self along with 
 #### Tips and Troubleshooting:
 - To monitor resource usage, docker container startup, and video device brokering, use the following commands in a terminal window:
 
-   `htop                       # Device resources  (device RAM and GPU RAM are lumped together)`
+   `htop'                       # Device resources  (device RAM and GPU RAM are lumped together)
    
-   `sudo ~/tegrastats          # RAM, CPU, GPU (GPU % load shows as 'GR3D', only when running with 'sudo')`
+   `sudo ~/tegrastats`          # RAM, CPU, GPU (GPU % load shows as 'GR3D', only when running with 'sudo')
    
-   `watch -n 1 ls /dev/video*  # Watch video devices come up and down as 'vdealer' allocates them`
+   `watch -n 1 ls /dev/video*`  # Watch video devices come up and down as 'vdealer' allocates them
    
-   `watch -n 1 docker stats    # Watch docker containers come up and down, and resource utilzation`
+   `watch -n 1 docker stats`    # Watch docker containers come up and down, and resource utilzation
 
 - Intu and face_classification will your webcam, which should show up as /dev/video1  (let us know if this turns out differently for you)
 - Intu won't function without required credentials. See this [list]()
