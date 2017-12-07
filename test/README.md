@@ -1,3 +1,5 @@
+<img src="https://avatars0.githubusercontent.com/u/23140100?s=200&v=4" width="150">
+
 ### README.md
 Readme for testing the Intu AI project deployment pattern. Intu/Self along with its associated edge deep learning workloads, can be executed on a Jetson TX2 using the script intu_pattern.sh
 
