@@ -11,9 +11,9 @@ Readme for testing the Intu AI project deployment pattern. Intu/Self along with 
 
 #### Execution:
 0. Configure your Jetson TX2 according to the requirements above
-1. Test v4l2loopback on your Jetson TX2 to confirm it works (see examples at link)
+1. Test `v4l2loopback` on your Jetson TX2 to confirm it works (see examples at link above)
 2. Clone this repo on your Jetson TX2 in the directory of your choice
-3. Navigate to the dir: self-jetsontx2/test
+3. Navigate to the local dir: self-jetsontx2/test
 4. Change permissions of the script `chmod +x intu_pattern.sh`
 5. Copy over your bootstrap.json file, containing IBM Cloud service credentials, to self-jetsontx2/test/config/self
 6. Run the script with `./intu_pattern.sh start`. Intu and its related deep learning services will load.  (docker will pull workload containers as-needed the first time. This will take a while... some containers are 6GB+)
