@@ -12,8 +12,7 @@ intu_ntwk_name="intu-ntwk"
 ## docker images and container names
 # video device broker
 vid_cntnr_name="vdealer-intu"
-#vid_cntnr_img="openhorizon/aarch64-tx2-vdealer"
-vid_cntnr_img="vdealer:test"
+vid_cntnr_img="openhorizon/aarch64-tx2-vdealer"
 
 # face emotion classification (DL, video)
 face_cntnr_img="face-classification-intu:test"

@@ -1,2 +1,2 @@
-/bootstrap.json
-/Dockerfile-dev
+dev/*
+test/config/self
