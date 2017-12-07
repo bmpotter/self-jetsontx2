@@ -15,7 +15,7 @@ vid_cntnr_name="vdealer-intu"
 vid_cntnr_img="openhorizon/aarch64-tx2-vdealer"
 
 # face emotion classification (DL, video)
-face_cntnr_img="face-classification-intu:test"
+face_cntnr_img="openhorizon/aarch64-tx2-face-classification-opencv3.1:intu"
 face_cntnr_name="face-emo-intu"
 face_cfg_path="$SCRIPTPATH/config/face_classification/src"
 
