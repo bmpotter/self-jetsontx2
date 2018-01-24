@@ -21,19 +21,18 @@ Clone this repo into a folder on your TX2
 
 Build Self docker image (this image will be ~6-7GB, ensure you have sufficient disk space)
  
- `docker build -t amd64/tx2/self:<version> .`
+ `docker build -t openhorizon/aarch64-tx2-intu-self:<version> .`
 
 ## Run
-Visit IBM.com and register for IBM Cloud services (Speech-to-Text, Text-to-Speech, Natural Language Classification)
-Once you've obtained your credentials, you'll run the container and add them to the bootstrap.json file in your build directory. 
+Visit IBM.com and register for IBM Cloud services (Speech-to-Text, Text-to-Speech, Natural Language Classification...)
+Once you've obtained your credentials, you'll run the container and add them to the bootstrap-example.json file in your build directory. 
 
-Run the Self container in privileged mode, to ensure access to the cam and mic: 
+`cp  ./config/self/bootstrap-example.json  ./config/self/bootstrap.json`
+`vim ./config/self/bootstrap.json`  fill in the required info
 
-`docker run -it --rm --privileged -p 9443:9443 amd64/tx2/self /bin/bash`
+Run the Self container in privileged mode, to ensure access to the cam (#1 for webcam) and mic (#3 for USB sound card), already defined in bootstrap-example.json and alsa.conf: 
 
-Add your credentials into your bootstrap.json file in the self build directory for linux:
-
-`vim /root/src/watson-intu/self/bin/linux/etc/shared/bootstrap.json`  fill in the required info
+`docker run --name intu-self -it --rm --privileged -p 9443:9443 -v $PWD/test/config/self:/configs openhorizon/aarch64-tx2-intu-self:edge /bin/bash -c "ln -s -f /configs/bootstrap.json bin/linux/etc/shared/; ln -s -f /configs/alsa.conf /usr/share/alsa/; ./bin/bash"`
 
 Run Self
 
@@ -44,3 +43,7 @@ Visit the Self web UI:
 - Via some other computer on your LAN http://<TX2_IP_address>:9443/www/dashboard
 
 Ask Self a question: "What is the weather today?"
+
+Once your config is set, subsequent runs of Self may be done directly:
+
+`docker run --name intu-self -it --rm --privileged -p 9443:9443 -v $PWD/test/config/self:/configs openhorizon/aarch64-tx2-intu-self:edge /bin/bash -c "ln -s -f /configs/bootstrap.json bin/linux/etc/shared/; ln -s -f /configs/alsa.conf /usr/share/alsa/; ./bin/linux/run_self.sh"`

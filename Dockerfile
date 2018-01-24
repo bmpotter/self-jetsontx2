@@ -61,5 +61,5 @@ RUN /bin/bash -c "if [ 'x$mode' != 'dev' ] ; then apt-get -y autoremove; fi"
 ## Configure and run Self with your own creds:
 # cd <self config dir>
 # copy in bootstrap.json file
-# Run self:
-# docker run -it --rm --privileged -p 9443:9443 -v $PWD:/configs openhorizon/cogwerx-aarch64-tx2-self:<version> /bin/bash -c "ln -s -f /configs/bootstrap.json bin/linux/etc/shared/; ln -s -f /configs/alsa.conf /usr/share/alsa/; bin/linux/run_self.sh"
+# Run self (see README.md)
+
