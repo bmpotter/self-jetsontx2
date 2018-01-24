@@ -1,2 +1,4 @@
 dev/*
-test/config/self/bootstrap.json
+test/*
+config/face_classification
+config/aural2

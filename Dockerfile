@@ -6,7 +6,7 @@
 FROM debian:jessie
 MAINTAINER dyec@us.ibm.com
 
-# Build arg "mode" (blank=standard full size container, "dev"= to be used with experimental "docker --squash", for min container size)
+# Build arg "mode": (blank=standard full size container, "dev": to be used with experimental "docker --squash", for min container size)
 ARG mode
 
 # Required for web UI
