@@ -17,6 +17,7 @@ A USB Webcam such as the common Logitech C720 should work. We're working on enab
 Clone this repo into a folder on your TX2
 
  `git clone https://github.com/open-horizon/self-jetsontx2.git`
+ 
  `cd self-jetsontx2`
 
 Build Self docker image (this image will be ~6-7GB, ensure you have sufficient disk space)
@@ -28,7 +29,7 @@ Visit IBM.com and register for IBM Cloud services (Speech-to-Text, Text-to-Speec
 Once you've obtained your credentials, you'll run the container and add them to the bootstrap-example.json file in your build directory. 
 
 `cp  ./config/self/bootstrap-example.json  ./config/self/bootstrap.json`
-`vim ./config/self/bootstrap.json`  fill in the required info
+`vim ./config/self/bootstrap.json          #fill in the required info`
 
 Run the Self container in privileged mode, to ensure access to the cam (#1 for webcam) and mic (#3 for USB sound card), already defined in bootstrap-example.json and alsa.conf: 
 
